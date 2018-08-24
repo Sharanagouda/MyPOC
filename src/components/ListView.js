@@ -8,7 +8,9 @@ class ListView extends React.Component {
     render(){
         return (
             <View style={styles.listViewContainer}>
-                {this.props.children}
+                <View style={styles.listViewWrapper}>
+                   {this.props.children}
+                </View>
             </View>
         )
     }

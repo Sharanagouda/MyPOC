@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import {View, Text, TouchableNativeFeedback, Image} from "react-native";
+import {DrawerNavigator} from 'react-navigation'
 
 import styles from "./../styles/styles";
 
@@ -16,13 +17,13 @@ class Toolbar extends Component {
     render() {
         return (
           <View style={styles.toolbarContainer}>
-            <TouchableNativeFeedback onPress={() => console.log("touched")}>
+            <TouchableNativeFeedback onPress={this.props.openDrawer}>
               <View style={styles.menubar}>
                   <Image
                     source={require('./../assets/menu.png')}
                   />
               </View>
-              </TouchableNativeFeedback >
+              </TouchableNativeFeedback>
           </View>
         );
     }
